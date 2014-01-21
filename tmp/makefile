@@ -5,11 +5,15 @@ help:
 	@echo ""
 	@echo
 
-
+all:
+	make -C ./kernel all
 
 run:
 	@echo "Running Dev Operating System."
 	cd ./tools && ./qemu.sh
 
 clean:
-	make -C ./kernel clean.
+	make -C ./kernel clean
+
+close:
+	cd ./tools && ./close.sh

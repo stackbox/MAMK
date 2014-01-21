@@ -4,8 +4,8 @@ include ./config.make
 
 all: $(KERNEL)
 
-$(KERNEL) : boot.asm
-		nasm -f bin boot.asm -o $(KERNEL)
+$(KERNEL) : bootset.asm
+		nasm -f bin bootset.asm -o $(KERNEL)
 
 clean:
 		rm $(KERNEL)
